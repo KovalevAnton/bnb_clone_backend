@@ -66,7 +66,7 @@ def properties_list(request):
     
     if category and category != 'undefined':
         properties = properties.filter(category=category)
-
+        
     if user:
         for property in properties:
             if user in property.favorited.all():
